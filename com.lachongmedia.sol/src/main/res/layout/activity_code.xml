@@ -1,0 +1,78 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.lachongmedia.sol"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:id="@+id/latout_app"
+    tools:context="com.lachongmedia.sol.code">
+
+    <RelativeLayout
+        android:id="@+id/ivThanhtrencung"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/thanhtrencung"></RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/ibBackCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@layout/button_backcode"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="6dp"/>
+
+    <TextView
+        android:id="@+id/tvCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Vui loøng nhaäp 4 soá xaùc nhaän baïn ñaõ\n nhaän ñöôïc töø +84 166 - 666 - 6666"
+        android:textSize="7pt"
+        android:lineSpacingExtra="1pt"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:ems="20"
+        android:textStyle="normal"
+        android:gravity="center"
+        android:textColor="@color/hong"
+        android:layout_below="@+id/ivThanhtrencung"/>
+
+    <EditText
+        android:id="@+id/etCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nhapcode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/tvCode"
+        android:inputType="number"
+        android:gravity="center"/>
+
+    <ImageButton
+        android:id="@+id/ibResendSMS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@layout/button_resendsms"
+        android:layout_below="@+id/etCode"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ibNext"
+        android:background="@layout/button_next"
+        android:layout_below="@+id/ibResendSMS"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:id="@+id/tvSupport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="6pt"
+        android:text="Giaûi quyeát xaùc nhaän thaát baïi"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"/>
+
+    </RelativeLayout>

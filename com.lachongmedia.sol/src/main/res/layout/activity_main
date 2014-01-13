@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.lachongmedia.sol"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:background="@drawable/backgroundmain"
+    tools:context="com.lachongmedia.sol.main"
+    android:id="@+id/rootLayout">
+
+    <RelativeLayout
+        android:id="@+id/ivThanhtrencungmain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/thanhtrencung"></ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_id"
+        android:id="@+id/rlBackgroundID"
+        android:layout_below="@+id/ivThanhtrencungmain">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID:123456"
+                android:textColor="@color/hong"
+                android:layout_marginLeft="10dp"/>
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layoutMain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rlBackgroundID"
+        android:layout_above="@+id/layoutEmo"
+        android:background="@drawable/backgroundchatfixed">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_khungchat"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/layoutKhungChat">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/khungchat_chat"
+                android:layout_toRightOf="@+id/btBackkhungchat"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:id="@+id/etChatbox"
+                android:paddingLeft="5dp"
+                android:paddingRight="25dp"
+                android:ems="10"
+                android:layout_toLeftOf="@+id/ibSend"
+                android:layout_marginRight="15dp"
+                android:singleLine="true"
+                android:imeOptions="actionSend"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ibSend"
+                android:background="@layout/button_send"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@layout/button_backcode"
+                android:id="@+id/btBackkhungchat"
+                android:layout_marginLeft="5dp"/>
+
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutKhungChat"
+            android:id="@+id/svChat">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/layoutChat">
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_emo"
+        android:layout_above="@+id/llButton"
+        android:id="@+id/layoutEmo">
+
+        <GridView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:verticalSpacing="15dp"
+            android:horizontalSpacing="10dp"
+            android:numColumns="4"
+            android:layout_centerInParent="true"
+            android:id="@+id/gvEmo"
+            android:listSelector="@drawable/backgroundselectedemo">
+
+        </GridView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/ivThanhtrencungmain"
+        android:layout_above="@+id/llButton"
+        android:background="@drawable/tranggioithieu"
+        android:id="@+id/rlGioiThieu"
+        android:visibility="gone"></RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/llButton">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ibGioithieu"
+                android:background="@layout/button_gioithieu"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ibChat"
+                android:background="@layout/button_chat"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/ibHatcungsao"
+                android:background="@layout/button_hatcungsao"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

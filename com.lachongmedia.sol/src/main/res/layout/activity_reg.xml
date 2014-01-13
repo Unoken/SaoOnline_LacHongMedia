@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res/com.lachongmedia.sol"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    tools:context="com.lachongmedia.sol.reg"
+    android:id="@+id/my_relative_layuot">
+
+    <RelativeLayout
+        android:id="@+id/ivReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/anhloginfull"></RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivReg"
+        android:layout_alignParentBottom="true">
+
+        <TextView
+            android:id="@+id/tvSdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NHAÄP SÑT DI ÑOÄNG"
+            android:layout_above="@+id/etSdt"
+            android:layout_marginBottom="14dp"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/hong"
+            android:textSize="22dp"/>
+
+        <EditText
+            android:id="@+id/etSdt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btReg"
+            android:layout_marginBottom="10dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/nhapsodt"
+            android:textSize="22dp"
+            android:inputType="number"
+            android:gravity="center"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@layout/button_reg"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="50dp"
+            android:id="@+id/btReg"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
